@@ -1,0 +1,18 @@
+{
+    "jobs": [
+        {
+            "label": "Cleaning",
+            "desc": "This is a sample",
+            "rate": 40,
+            "address": "213 Hyaat Way",
+            "phone": 2342342
+        },
+        {
+            "label": "Washing",
+            "desc": "Car Wash",
+            "rate": 10,
+            "address": "123 Heaven Way",
+            "phone": 3294238947
+        }
+    ]
+}
