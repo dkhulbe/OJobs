@@ -7,53 +7,74 @@
 </head><br><br><br><br>
 
 <body align=center>
-    <table border=100 align=center>
-        <tr>
-            <td>
+    <form name="frm">
+        <table border=100 align=center>
+            <tr>
+                <td>
 
-                <table align=center border=1>
-                    <tr height=50>
-                        <td width=350 bgcolor="white" align=center>
-                            <input id="btn" width=350 type=button value="Post a job"
-                                style="width: 80%; height: 100%"></input>
-                        </td>
-                        <script>
-                            document.getElementById('btn').addEventListener
-                                ('click', getText);
-                            function getText() {
-                                fetch('Postajob.html')
+                    <table align=center border=1>
+                        <tr height=50>
+                            <td width=350 bgcolor="white" align=center>
+                                <input id="btn" width=350 type=button value="Post a job"
+                                    style="width: 80%; height: 100%"></input>
+                            </td>
+                            <script>
+                                document.getElementById('btn').addEventListener
+                                    ('click', postjob());
+                                console.log("here");
+                                function postjob() {
+                                    /*fetch('Postajob.html')
                                     .then(function (res) {
-                                        console.log(res);
-
-                                    })
-
-
-
-                            }
-                        </script>
-                    </tr>
-
-                    <tr height=50>
-                        <td width=350 bgcolor="white" align=center>
-                            <input name="btn" width=350 type=button value="Search for a job"
-                                style="width: 80%; height: 80%" onclick=SearchJob()></input>
-                        </td>
-                    </tr>
-
-                    <tr height=50>
-                        <td width=350 bgcolor="white" align=center>
-                            <input name="btn" width=350 type=button value="About Odd Jobs"
-                                style="width: 80%; height: 80%" onclick=About()></input>
-                        </td>
-                    </tr>
+                                    console.log(res);
+        
+        
+                                    })*/
+                                    console.log("in postjob");
 
 
 
-                </table>
+                                }
+                            </script>
+                        </tr>
 
-    </table>
-    </tr>
-    </td>
+                        <tr height=50>
+                            <td width=350 bgcolor="white" align=center>
+                                <input id="btn1" width=350 type=button value="Search for a job"
+                                    style="width: 80%; height: 80%"></input>
+                            </td>
+                            <script>
+                                document.getElementById('btn1').addEventListener
+                                    ('click', getSearch);
+                                function getSearch() {
+                                    fetch('script.js')
+                                        .then(function (res) {
+                                            console.log(res);
+
+                                        })
+
+
+
+                                }
+                            </script>
+                        </tr>
+
+                        <tr height=50>
+                            <td width=350 bgcolor="white" align=center>
+                                <input name="btn" width=350 type=button value="About Odd Jobs"
+                                    style="width: 80%; height: 80%"
+                                    onclick=window.location.replace="Aboutus.html"></input>
+                            </td>
+                        </tr>
+
+
+
+                    </table>
+
+        </table>
+        </tr>
+        </td>
+    </form>
+    <script src="script.js"></script>
 </body>
 
 </html>

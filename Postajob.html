@@ -1,0 +1,97 @@
+var fs = require("fs")
+
+<html>
+
+<head>
+    <title>Odd Jobs - Post a Job</title>
+    <h1 align="center">Post a Job</h1>
+</head>
+<script>
+    function GoBack() {
+        window.location.replace("C:/Users/padma/Desktop/Html/HomePage.html");
+    }
+
+    function Success() {
+        var title = frm.jlabel.value;
+        var desc = frm.jdescription.value;
+        var pay = frm.payment.value;
+        window.localStorage.setItem('label', title);
+        window.localStorage.setItem('desc', desc);
+        window.localStorage.setItem('pay', pay);
+        //window.location.replace("file:///C:/Users/padma/Desktop/Html/Succes.html");
+        var retlabel = window.localStorage.getItem('label');
+        var retdesc = window.localStorage.getItem('desc');
+        var retpay = window.localStorage.getItem('pay');
+
+        alert(retlabel);
+        alert(retdesc);
+        alert(retpay);
+
+
+
+    }
+</script>
+
+
+
+<body>
+    <form name="frm" action="script.js">
+        <table align=center>
+            <tr>
+
+                <td><label>Job Label</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input id="label" name="jlabel" type=text size=50></input><br><br></td>
+            </tr>
+
+            <td><label>Job Description</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input id="dsc" name="jdescription" type=text size=50></input><br><br></td>
+            </tr>
+
+            <td><label>Payment Per Hour</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input id="rate" name="payment" type=text size=50></input><br><br></td>
+            </tr>
+
+            <td><label>Address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input ide="add" name="address" type=text size=50></input><br><br></td>
+            </tr>
+
+            <td><label>City</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input id="phno" name="city" type=text size=50></input><br><br></td>
+            </tr>
+
+            <td><label>State</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input name="state" type=text size=50></input><br><br></td>
+            </tr>
+
+            <td><label>Zip code</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input name="zip" type=text size=50></input><br><br></td>
+            </tr>
+
+            <td><label>Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input name="email" type=text size=50></input><br><br></td>
+            </tr>
+
+            <td><label>Contact Number (optional)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input name="contact" type=text size=50></input><br><br></td>
+            </tr>
+
+
+            <tr>
+                <td></td>
+
+                <td align=left><input type=button value="Go Back" onclick=GoBack()>
+                <td align=right><input type=button value="Submit" onclick=Success()>
+
+
+
+
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+
+
+</html>

@@ -1,3 +1,4 @@
+const { compileFunction } = require("vm");
 
 
 var jcontent = {
@@ -25,6 +26,11 @@ var jcontent = {
         }
     ]
 }
+
+/*fetch("./jobs.json")
+    .then(response => response.json())
+    .then(json => console.log(json));*/
+
 var ajaxhttp = new XMLHttpRequest();
 var url = "C:\OJobs\jobs.json";
 console.log(url);
@@ -56,6 +62,12 @@ for (var i = 0; i <= jcontent.jobs.length; i++) {
     document.write("</table>");
     document.write("<br>")
 }
+function postjob() {
+    window.location.replace('Postajob.html');
+}
 
-
+function savejob() {
+    document.getElementById('label').nodeValue;
+    console.log("in savejob()");
+}
 

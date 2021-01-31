@@ -1,8 +1,10 @@
-var http = require('http')
-var fs = require('fs')
+var http = require("http")
+var fs = require("fs")
+var url = require("url")
 
 var server = http.createServer(function (req, res) {
     console.log("Request was made");
+
     //res.setHeader("Content-Type", "application/json");
     //res.setHeader("Access-Control-Allow-Origin", "*");
     //res.writeHead(200);
@@ -11,7 +13,11 @@ var server = http.createServer(function (req, res) {
 
     //let dataObj = {id:123, name:"Bob", email:"bob@gmail.com"};
     //let data = JSON.stringify(dataObj);
-    fs.readFile('C:/OJobs/index.html', function (err, data) {
+    var pathname = url.parse(req.url).pathname;
+    console.log(pathname);
+    console.log(req.url);
+    //res.writeHead(301, { Location: 'Postajob.html' + pathname });
+    fs.readFile('Homepage.html', function (err, data) {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.write(data);
         res.end(data);
